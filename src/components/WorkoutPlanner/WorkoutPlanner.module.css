@@ -1,0 +1,317 @@
+/* Workout Planner Styles */
+.workoutPlannerContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+.planHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.planTitle {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+  flex: 1;
+  min-width: 200px;
+}
+
+.weeklyStats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  min-width: 120px;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Days Grid */
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Day Card Styles */
+.dayCard {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.dayCard:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.dayHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dayName {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.dayStats {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.exerciseCount,
+.calorieCount {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.dayBody {
+  flex: 1;
+  padding: 15px;
+}
+
+.emptyMessage {
+  color: #999;
+  text-align: center;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.exerciseList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exerciseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  transition: all 0.2s ease;
+}
+
+.exerciseItem:hover {
+  background-color: #e9ecef;
+}
+
+.exerciseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.exerciseName {
+  font-weight: 600;
+  color: #333;
+}
+
+.exerciseSets {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.removeButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.dayFooter {
+  padding: 10px 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.clearButton {
+  width: 100%;
+}
+
+/* Exercise Selector Modal Styles */
+.exerciseSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exerciseSelectInput {
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.exerciseSelectInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.exercisePreview {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.exercisePreview p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.addExerciseBtn {
+  width: 100%;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.actionButtons button {
+  min-width: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .planHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .planTitle {
+    font-size: 1.5rem;
+  }
+
+  .weeklyStats {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .statBox {
+    flex: 1;
+    min-width: 100px;
+    padding: 12px 15px;
+  }
+
+  .daysGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dayHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dayStats {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .actionButtons button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .workoutPlannerContainer {
+    padding: 10px;
+  }
+
+  .planTitle {
+    font-size: 1.3rem;
+  }
+
+  .weeklyStats {
+    gap: 10px;
+  }
+
+  .statBox {
+    padding: 10px;
+    min-width: 80px;
+  }
+
+  .statValue {
+    font-size: 1.4rem;
+  }
+
+  .statLabel {
+    font-size: 0.75rem;
+  }
+
+  .dayCard {
+    border-radius: 6px;
+  }
+
+  .exerciseItem {
+    font-size: 0.9rem;
+  }
+}

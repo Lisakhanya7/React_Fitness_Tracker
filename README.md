@@ -1,19 +1,70 @@
-# React_Fitness_Tracker
+# Getting Started with Create React App
 
-A fitness center chain has commissioned a modern web application to help their members track workouts, plan exercise routines, and monitor their fitness progress. They need a responsive, well-tested React application that allows users to log exercises, create weekly workout plans, watch exercise demonstration videos, listen to motivational audio tracks, and track their fitness journey over time. You've been hired to build this application from scratch, demonstrating your proficiency in React fundamentals, component architecture, state management, testing, and modern JavaScript practices.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Your task is to build a fully functional Fitness Tracker & Workout Planner application using React and Jest/React Testing Library. You must create the entire application from the ground up, demonstrating mastery of functional components, hooks, props, event handling, routing, conditional rendering, multimedia integration, and comprehensive testing practices. The application must be well-organized, styled professionally, thoroughly tested, and provide an excellent user experience.
+## Available Scripts
 
-## Project Overview: Fitness Tracker & Workout Planner App
-**Core Features Required:**
-- Browse and search exercises by category, muscle group, or difficulty
-- View detailed exercise information with proper form instructions
-- Watch exercise demonstration videos
-- Listen to workout motivation audio tracks
-- Add exercises to a weekly workout planner (Monday-Sunday)
-- Log completed workouts with sets, reps, and weight
-- Track workout history and progress over time
-- Filter and sort exercises dynamically
-- Responsive navigation with multiple routes
-- Interactive user interface with smooth transitions
-- Comprehensive test coverage with Jest and React Testing Library
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,492 @@
+/* Page Container Styles */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Home Page Styles */
+.homePage {
+  width: 100%;
+}
+
+.todaySection {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.sectionTitle {
+  margin: 0 0 30px 0;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.todayCard {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.workoutList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.workoutItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #e7f3ff;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.workoutName {
+  font-weight: 600;
+  color: #333;
+}
+
+.workoutSets {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.noWorkout {
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logButton {
+  width: 100%;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.featureTitle {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.featureDescription {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Motivation Section */
+.motivationSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 20px;
+}
+
+.motivationSection .sectionTitle {
+  color: white;
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaTitle {
+  margin: 0 0 20px 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.ctaText {
+  margin: 0 0 30px 0;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtons a {
+  text-decoration: none;
+}
+
+/* Exercises Page */
+.exercisesPage {
+  width: 100%;
+}
+
+.resultsInfo {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e7f3ff;
+  border-radius: 6px;
+  text-align: center;
+  color: #0056b3;
+  font-weight: 600;
+}
+
+/* Planner Page */
+.plannerPage {
+  width: 100%;
+}
+
+/* History Page */
+.historyPage {
+  width: 100%;
+}
+
+/* Progress Page */
+.progressPage {
+  width: 100%;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  padding: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.statInfo {
+  flex: 1;
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.statValue {
+  margin: 5px 0 0 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.detailedStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.detailedCard {
+  padding: 30px;
+}
+
+.cardTitle {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  color: #333;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.summaryLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.summaryValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.tipsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tipsList li {
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #28a745;
+  color: #333;
+  line-height: 1.5;
+}
+
+.insightsCard {
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.insightsCard .cardTitle {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.insightsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.insightsContent p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Not Found Page */
+.notFoundPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.notFoundContainer {
+  text-align: center;
+  background: white;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.errorCode {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.errorTitle {
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.errorMessage {
+  margin: 0 0 30px 0;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 400px;
+}
+
+.errorActions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.errorActions button {
+  min-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageContainer,
+  .sectionContainer {
+    padding: 30px 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailedStats {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButtons a {
+    width: 100%;
+  }
+
+  .notFoundContainer {
+    padding: 40px 20px;
+  }
+
+  .errorCode {
+    font-size: 4rem;
+  }
+
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContainer,
+  .sectionContainer {
+    padding: 20px 10px;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .todayCard {
+    padding: 15px;
+  }
+
+  .workoutItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .statCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .statContent {
+    flex-direction: column;
+  }
+
+  .statIcon {
+    font-size: 2rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .notFoundContainer {
+    padding: 30px 15px;
+  }
+
+  .errorCode {
+    font-size: 3rem;
+  }
+
+  .errorTitle {
+    font-size: 1.2rem;
+  }
+
+  .errorActions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .errorActions button {
+    width: 100%;
+  }
+}
