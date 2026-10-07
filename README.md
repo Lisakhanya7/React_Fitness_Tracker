@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Travel Itinerary Planning & Booking API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a Django REST API for trip planning, collaboration, destination discovery, booking management, budgets, expenses, and reviews. The project uses JWT authentication, layered permissions, and OpenAPI docs for a clean developer experience.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+- Python 3.14
+- Django 5.2
+- Django REST Framework 3.15
+- djangorestframework-simplejwt
+- django-filter
+- drf-spectacular
+- SQLite for local development
 
-### `npm start`
+## Project overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Users can create accounts, log in with JWT, browse destinations, create trip itineraries, add collaborators, book accommodations and activities, track budgets, and review destinations. The core design centers around a trip, with nested itinerary days, trip members, bookings, and expenses all linked to the same travel plan.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation and setup
 
-### `npm test`
+1. Clone the repository.
+2. Create and activate a virtual environment.
+3. Install dependencies:
+   `pip install -r requirements.txt`
+4. Copy `.env.example` to `.env` and customize values as needed.
+5. Run migrations:
+   `python manage.py migrate`
+6. Start the server:
+   `python manage.py runserver 127.0.0.1:8000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Environment variables
 
-### `npm run build`
+- `SECRET_KEY` — Django secret key
+- `DEBUG` — enable/disable debug mode
+- `ALLOWED_HOSTS` — comma-separated hosts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Authentication
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The API uses JWT bearer tokens.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Example login request:
 
-### `npm run eject`
+```bash
+curl -X POST http://127.0.0.1:8000/api/auth/login/ \
+  -H "Content-Type: application/json" \
+  -d '{"email":"alice@example.com","password":"StrongPass123"}'
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Use the returned `access` token as:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+curl http://127.0.0.1:8000/api/auth/me/ \
+  -H "Authorization: Bearer <access_token>"
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API endpoints
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Auth: `/api/auth/register/`, `/api/auth/login/`, `/api/auth/token/refresh/`, `/api/auth/me/`, `/api/auth/profile/`
+- Destinations: `/api/destinations/`, `/api/destinations/trending/`
+- Trips: `/api/trips/`, `/api/trips/summary/`, `/api/trips/<id>/days/`, `/api/trips/<id>/members/`
+- Bookings: `/api/bookings/`
+- Budgets: `/api/budgets/budgets/`, `/api/budgets/expenses/`
+- Reviews: `/api/reviews/`, `/api/reviews/destinations/<id>/summary/`
+- Docs: `/api/schema/`, `/api/docs/`, `/api/redoc/`
 
-## Learn More
+## Example requests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a trip:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+curl -X POST http://127.0.0.1:8000/api/trips/ \
+  -H "Authorization: Bearer <access_token>" \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Paris Weekend","description":"Short getaway","start_date":"2026-07-10","end_date":"2026-07-14","status":"planning"}'
+```
 
-### Code Splitting
+Create a review:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+curl -X POST http://127.0.0.1:8000/api/reviews/ \
+  -H "Authorization: Bearer <access_token>" \
+  -H "Content-Type: application/json" \
+  -d '{"destination": 1, "rating": 5, "title": "Great", "body": "Excellent destination."}'
+```
 
-### Analyzing the Bundle Size
+## Project structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `accounts/` — user model, auth, profile endpoints
+- `destinations/` — destination and media catalog
+- `itineraries/` — trips, day plans, attachments, collaborators
+- `bookings/` — reservations and accommodation/activity records
+- `budgets/` — budget and expense records
+- `reviews/` — destination ratings and feedback
+- `config/` — Django settings and URLs
+- `docs/` — planning and ERD documentation
 
-### Making a Progressive Web App
+## ERD
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See [docs/ERD.md](docs/ERD.md).

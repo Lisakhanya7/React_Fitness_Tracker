@@ -7,9 +7,23 @@
 
 # testing
 /coverage
+/.pytest_cache/
 
 # production
 /build
+/staticfiles/
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+.env.*
+venv/
+.venv/
+
+# Django media/uploads
+/media/
 
 # misc
 .DS_Store
