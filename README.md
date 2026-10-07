@@ -56,7 +56,7 @@ curl http://127.0.0.1:8000/api/auth/me/ \
 ## API endpoints
 
 - Auth: `/api/auth/register/`, `/api/auth/login/`, `/api/auth/token/refresh/`, `/api/auth/me/`, `/api/auth/profile/`
-- Destinations: `/api/destinations/`, `/api/destinations/trending/`
+- Destinations: `/api/destinations/`, `/api/destinations/trending/`, `/api/destinations/recommendations/`
 - Trips: `/api/trips/`, `/api/trips/summary/`, `/api/trips/<id>/days/`, `/api/trips/<id>/members/`
 - Bookings: `/api/bookings/`
 - Budgets: `/api/budgets/budgets/`, `/api/budgets/expenses/`

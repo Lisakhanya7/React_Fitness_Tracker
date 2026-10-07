@@ -19,6 +19,28 @@ def trending_destinations(request):
     return Response(serializer.data)
 
 
+@api_view(["GET"])
+@permission_classes([permissions.IsAuthenticated])
+def personalized_recommendations(request):
+    profile = getattr(request.user, "profile", None)
+    interests = []
+    if profile:
+        interests = profile.preferred_interests or []
+
+    qs = Destination.objects.filter(is_active=True)
+    if interests:
+        filters = Q()
+        for interest in interests:
+            filters |= Q(category__icontains=interest)
+        qs = qs.filter(filters)
+
+    if not qs.exists():
+        qs = Destination.objects.filter(is_active=True).order_by("-average_cost")[:5]
+
+    serializer = DestinationSerializer(qs[:5], many=True)
+    return Response(serializer.data)
+
+
 class DestinationViewSet(viewsets.ModelViewSet):
     queryset = Destination.objects.filter(is_active=True).annotate(
         avg_rating=Avg("reviews__rating"), review_count=Count("reviews")
